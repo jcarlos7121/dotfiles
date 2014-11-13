@@ -109,6 +109,7 @@ map <Leader>gm :CtrlPModified<CR>
 map <Leader>gM :CtrlPBranch<CR>
 map <C-a> :NeoCompleteDisable<CR>
 map <C-s> :NeoCompleteEnable<CR>
+map <F3> :!fish<CR>
 vmap <Tab> >
 
 nnoremap <C-J> <C-W><C-J>
@@ -188,6 +189,7 @@ let g:agprg="ag --column"
 
 "NERDTREE + CTRLP integration
 source ~/.vim/config/ntfinder.vim
+source ~/.vim/config/startup.vim
 let NERDTreeQuitOnOpen=1
 let NERDTreeBookmarksFile=expand("$HOME/.vim-NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1
@@ -196,3 +198,6 @@ let g:ctrlp_dont_split = 'NERD'
 let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_by_filename = 1
+
+" On startup
+autocmd VimEnter * call StartUp()
