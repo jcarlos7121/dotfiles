@@ -107,6 +107,8 @@ let g:multi_cursor_quit_key='<Esc>'
 
 map <Leader>gm :CtrlPModified<CR>
 map <Leader>gM :CtrlPBranch<CR>
+map <Leader>z :tab split<CR>
+map <Leader>q :tabclose<CR>
 map <C-a> :NeoCompleteDisable<CR>
 map <C-s> :NeoCompleteEnable<CR>
 map <F3> :!fish<CR>
