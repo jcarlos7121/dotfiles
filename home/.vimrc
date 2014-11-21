@@ -88,8 +88,9 @@ Bundle 'guicolorscheme.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'airblade/vim-rooter'
-Bundle "pangloss/vim-javascript"
+Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+Bundle 'ngmy/vim-rubocop'
 
 ""Color"
 color distinguished
@@ -107,6 +108,8 @@ let g:multi_cursor_quit_key='<Esc>'
 
 map <Leader>gm :CtrlPModified<CR>
 map <Leader>gM :CtrlPBranch<CR>
+map <Leader>z :tab split<CR>
+map <Leader>q :tabclose<CR>
 map <C-a> :NeoCompleteDisable<CR>
 map <C-s> :NeoCompleteEnable<CR>
 map <F3> :!fish<CR>
@@ -164,11 +167,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
 
-"Rsense
-"let g:rsenseHome = "/home/juancarlos/bin/rsense-0.3"
-"let g:rsenseUseOmniFunc = 1
-"let g:neocomplete#sources#rsense#home_directory = '/home/juancarlos/bin/rsense-0.3'
-
 "Vim Rspec
 map <Leader>w :call RunAllSpecs()<CR>
 map <Leader>e :call RunNearestSpec()<CR>
@@ -195,7 +193,7 @@ let NERDTreeBookmarksFile=expand("$HOME/.vim-NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 let g:ctrlp_dont_split = 'NERD'
-let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git']
+let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git', '.floo']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_by_filename = 1
 

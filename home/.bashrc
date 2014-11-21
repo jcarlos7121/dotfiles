@@ -125,6 +125,7 @@ PATH=$PATH:$HOME/bin/android-studio/sdk/tools
 PATH=$PATH:$HOME/bin/android-studio/sdk/platform-tools
 PATH=$PATH:$HOME/bin/phantomjs-1.9.7-linux-x86_64/bin
 PATH=$PATH:$HOME/bin/the_silver_searcher
+PATH=$PATH:$HOME/.linuxbrew/bin
 PATH="/usr/local/heroku/bin:$PATH"
 #source /home/juancarlos/bin/pvm/pvm.sh
 eval "$(rbenv init -)"
