@@ -121,6 +121,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <F5> :call NTFinderP()<CR>
 nnoremap <F6> :GundoToggle<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " " For snippet_complete marker.
 if has('conceal')
@@ -192,10 +194,11 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeBookmarksFile=expand("$HOME/.vim-NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
-let g:ctrlp_dont_split = 'NERD'
-let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git', '.floo']
-let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_dont_split = 'NERD'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git', '.floo']
 
 " On startup
 autocmd VimEnter * call StartUp()
