@@ -33,10 +33,10 @@ set noswapfile
 set shiftwidth=2
 set expandtab
 set autochdir
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=2         "this is just what i use
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 set pastetoggle=<F2>
 
 Bundle 'gmarik/vundle'
@@ -91,6 +91,7 @@ Bundle 'airblade/vim-rooter'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'ngmy/vim-rubocop'
+Bundle 'ap/vim-css-color'
 
 ""Color"
 color distinguished
@@ -123,6 +124,7 @@ nnoremap <F5> :call NTFinderP()<CR>
 nnoremap <F6> :GundoToggle<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>c :!zenity --color-selection<CR>
 
 " " For snippet_complete marker.
 if has('conceal')
