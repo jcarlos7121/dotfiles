@@ -1,9 +1,6 @@
 set encoding=utf-8
 set nocompatible | filetype indent plugin on | syn on | filetype plugin on
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
 set t_Co=256                            " User 256 colors
 set synmaxcol=240                       " Hightlight only the first n chars
 set tabstop=2
@@ -33,64 +30,105 @@ set autochdir
 set foldmethod=indent
 set foldlevel=1
 set pastetoggle=<F2>
+set laststatus=2
+set tags+=gems.tags
+set t_ut=
 
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'dag/vim-fish'
-Bundle 'danro/rename.vim'
-Bundle 'edsono/vim-matchit'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'godlygeek/tabular'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'honza/vim-snippets'
-Bundle 'ivalkeen/vim-ctrlp-tjump'
-Bundle 'jasoncodes/ctrlp-modified.vim'
-Bundle 'justinmk/vim-gtfo'
-Bundle 'justinmk/vim-sneak'
-Bundle 'kana/vim-smartinput'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vinegar'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'rodjek/vim-puppet'
-Bundle 'Floobits/floobits-vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-bufferline'
-Bundle 'chriskempson/base16-vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Shougo/neocomplete'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-rbenv'
-Bundle 'mattn/emmet-vim'
-Bundle 'farseer90718/vim-colorpicker'
-Bundle 'guicolorscheme.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'airblade/vim-rooter'
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
-Bundle 'ngmy/vim-rubocop'
-Bundle 'ap/vim-css-color'
-Bundle 'MattesGroeger/vim-bookmarks'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'danchoi/ri.vim'
-Bundle 'mtscout6/vim-cjsx'
+"NeoBundle Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath^=/home/juancarlos/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('/home/juancarlos/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'bling/vim-airline'
+NeoBundle 'dag/vim-fish'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'ivalkeen/vim-ctrlp-tjump'
+NeoBundle 'jasoncodes/ctrlp-modified.vim'
+NeoBundle 'justinmk/vim-gtfo'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'geekjuice/vim-spec'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'rodjek/vim-puppet'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'tpope/vim-rbenv'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'farseer90718/vim-colorpicker'
+NeoBundle 'guicolorscheme.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'airblade/vim-rooter'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'briancollins/vim-jst'
+NeoBundle 'ngmy/vim-rubocop'
+NeoBundle 'ap/vim-css-color'
+NeoBundle 'MattesGroeger/vim-bookmarks'
+NeoBundle 'chrisbra/NrrwRgn'
+NeoBundle 'danchoi/ri.vim'
+NeoBundle 'mtscout6/vim-cjsx'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'jgdavey/vim-blockle'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'bkad/CamelCaseMotion'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'ain/vim-capistrano'
+NeoBundle 'BjRo/vim-extest'
+NeoBundle 'mattreduce/vim-mix'
+NeoBundle 'jvirtanen/vim-octave'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'Chiel92/vim-autoformat'
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
 
 syntax enable                           " Switch syntax highlighting on
 syntax on
@@ -98,6 +136,7 @@ syntax on
 ""Color"
 color distinguished
 let g:airline_theme='thechosen'
+"let g:molasses_wait=5000
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:hybrid_use_Xresources = 1
@@ -108,15 +147,25 @@ let g:multi_cursor_next_key='<C-d>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+let g:autoformat_verbosemode=1
+
+map <S-W> <Plug>CamelCaseMotion_w
+map <S-B> <Plug>CamelCaseMotion_b
+map <S-E> <Plug>CamelCaseMotion_e
 
 map <Leader>gm :CtrlPModified<CR>
 map <Leader>gM :CtrlPBranch<CR>
 map <Leader>z :tab split<CR>
 map <Leader>q :tabclose<CR>
-map <C-a> :NeoCompleteDisable<CR>
+map <C-w> :NeoCompleteDisable<CR>
 map <C-s> :NeoCompleteEnable<CR>
 map <F3> :!fish<CR>
 vmap <Tab> >
+
+" Convert Js to Coffee
+vmap <Leader>jc <esc>:'<,'>!js2coffeescript<CR>
+" " Convert Coffee to JS
+vmap <leader>cj <esc>:'<,'>!coffee -sbp<CR>"
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -124,6 +173,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <F5> :call NTFinderP()<CR>
 nnoremap <F6> :GundoToggle<CR>
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>m :!octave %<cr>
+nmap <F8> :TagbarToggle<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>c :!zenity --color-selection<CR>
@@ -154,8 +206,10 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+autocmd BufWritePost *.rb,*.js,*.html,*.haml,*.css,*.sass,*.coffee silent! !ctags -R 2> /dev/null --exclude=.git --exclude=log --exclude=frontend --exclude=tmp &
 autocmd VimResized * wincmd =
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufReadPost * set bufhidden=delete
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
@@ -182,6 +236,10 @@ let g:bookmark_sign = '₪'
 let g:bookmark_highlight_lines = 1
 
 "Vim Rspec
+let g:mocha_js_command = "Dispatch mocha --recursive --no-colors {spec}"
+let g:mocha_coffee_command = "Dispatch mocha -b --compilers coffee:coffee-script/register {spec}"
+let g:rspec_command = "Dispatch rspec {spec}"
+
 map <Leader>w :call RunAllSpecs()<CR>
 map <Leader>e :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -197,11 +255,12 @@ let g:user_emmet_leader_key='<C-x>'
 
 "agprg
 "Remember install silver_searcher
-let g:agprg="ag --column"
+"let g:ag_prg="ag --column"
+let g:ag_prg='ag -S --nocolor --nogroup --column --ignore tmp --ignore node_modules --ignore "./frontend/node_modules/*" --ignore "./frontend/tmp/*"'
 
 "NERDTREE + CTRLP integration
 source ~/.vim/config/ntfinder.vim
-source ~/.vim/config/startup.vim
+source ~/.vim/config/envcommands.vim
 let NERDTreeQuitOnOpen=1
 let NERDTreeBookmarksFile=expand("$HOME/.vim-NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1
@@ -210,7 +269,8 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_dont_split = 'NERD'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules'
-let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git', '.floo']
+let g:ctrlp_root_markers = ['.acignore', '.gitignore', '.git', '.floo', 'Gemfile']
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store --ignore "**/*.pyc" -g ""'
 
-" On startup
-autocmd VimEnter * call StartUp()
+" Autosave
+"let g:auto_save = 1
